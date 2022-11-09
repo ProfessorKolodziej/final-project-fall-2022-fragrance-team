@@ -1,3 +1,6 @@
+* {
+	box-sizing: border-box;
+}
 // Load CSS Reset from NPM
 // CSS resets "normalize" how browser styles are applied.
 // Try commenting this out and saving. What changes in the browser?
@@ -21,25 +24,28 @@ $red: #ab424a;
 $orange: #dd7c00;
 $green: #3b975f;
 $blue: #4261ab;
+body {
+	background-color: #FCF9EE;
+}
 
 .page-heading {
 	color: $red;
 
-	// Sass lets you write your media queries inline if you want.
-	// This is why I'm always forgetting I have to put the class inside
-	// the media query in regular CSS. I never have to in Sass!
-	// I like combining these with variables to make it easier to read
-	// my media queries.
+// Sass lets you write your media queries inline if you want.
+// This is why I'm always forgetting I have to put the class inside
+// the media query in regular CSS. I never have to in Sass!
+// I like combining these with variables to make it easier to read
+// my media queries.
 
-	@media screen and (min-width: $large-phone) {
-		color: $orange;
-	}
+@media screen and (min-width: $large-phone) {
+	color: $orange;
+}
 
-	@media screen and (min-width: $tablet-vertical) {
-		color: $green;
-	}
+@media screen and (min-width: $tablet-vertical) {
+	color: $green;
+}
 
-	@media screen and (min-width: $desktop) {
-		color: $blue;
-	}
+@media screen and (min-width: $desktop) {
+	color: $blue;
+}
 }
