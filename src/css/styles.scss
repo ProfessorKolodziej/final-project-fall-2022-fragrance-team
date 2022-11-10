@@ -1,6 +1,7 @@
 * {
 	box-sizing: border-box;
 }
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 // Load CSS Reset from NPM
 // CSS resets "normalize" how browser styles are applied.
@@ -38,10 +39,11 @@ $blue: #4261ab;
 	left: 0;
 	width: 100%;
 	height: 100vh;
-	background: #FCF9EE;
+	background: #fcf9ee;
 	transition: 0.2s;
 	display: flex;
 }
+
 .navigation .navArea {
 	position: relative;
 	width: 50%;
@@ -96,10 +98,10 @@ $blue: #4261ab;
 }
 
 .navigation .navArea ul li:hover a {
-	color: rgba(45, 41, 41, 0.5)
+	color: rgba(45, 41, 41, 0.5);
 }
 
-.imgArea{
+.imgArea {
 	position: relative;
 	width: 50%;
 	height: 100vh;
@@ -117,22 +119,20 @@ $blue: #4261ab;
 
 .page-heading {
 	color: $red;
+	// Sass lets you write your media queries inline if you want.
+	// This is why I'm always forgetting I have to put the class inside
+	// the media query in regular CSS. I never have to in Sass!
+	// I like combining these with variables to make it easier to read
+	// my media queries.
+	@media screen and (min-width: $large-phone) {
+		color: $orange;
+	}
 
-// Sass lets you write your media queries inline if you want.
-// This is why I'm always forgetting I have to put the class inside
-// the media query in regular CSS. I never have to in Sass!
-// I like combining these with variables to make it easier to read
-// my media queries.
+	@media screen and (min-width: $tablet-vertical) {
+		color: $green;
+	}
 
-@media screen and (min-width: $large-phone) {
-	color: $orange;
-}
-
-@media screen and (min-width: $tablet-vertical) {
-	color: $green;
-}
-
-@media screen and (min-width: $desktop) {
-	color: $blue;
-}
+	@media screen and (min-width: $desktop) {
+		color: $blue;
+	}
 }
