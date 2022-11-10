@@ -46,7 +46,7 @@ $blue: #4261ab;
 
 .navigation .navArea {
 	position: relative;
-	width: 50%;
+	width: 100%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -76,6 +76,7 @@ $blue: #4261ab;
 
 .navigation .navArea ul li:nth-child(2)::before {
 	background: #4261ab;
+	opacity: 20%;
 }
 
 .navigation .navArea ul li:nth-child(3)::before {
@@ -94,7 +95,7 @@ $blue: #4261ab;
 	font-size: 2em;
 	font-weight: 600;
 	text-decoration: none;
-	color: rgba(0, 0, 0, 0.5);
+	color: #fcf9ee;
 }
 
 .navigation .navArea ul li:hover a {
@@ -102,10 +103,11 @@ $blue: #4261ab;
 }
 
 .imgArea {
-	position: relative;
-	width: 50%;
+	position: absolute;
+	width: 100%;
 	height: 100vh;
 	background: #0e0b01;
+	z-index: -1;
 }
 
 .imgArea img {
