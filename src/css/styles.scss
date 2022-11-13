@@ -30,6 +30,14 @@ $blue: #4261ab;
 	box-sizing: border-box;
 }
 
+a {
+	text-decoration: none;
+}
+
+body {
+	background-color: #fcf9ee;
+}
+
 .container {
 	width: 80%;
 	margin: auto;
@@ -58,7 +66,7 @@ $blue: #4261ab;
 }
 
 .nbar {
-	margin-top: 500px;
+	margin-top: 450px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	width: 100%;
@@ -83,6 +91,10 @@ $blue: #4261ab;
 	font-size: 10px;
 }
 
+h1 {
+	color: red;
+}
+
 @keyframes anima {
 	0% {
 		opacity: 0.6;
@@ -94,23 +106,19 @@ $blue: #4261ab;
 		transform: scale(1.1);
 	}
 }
+// Sass lets you write your media queries inline if you want.
+// This is why I'm always forgetting I have to put the class inside
+// the media query in regular CSS. I never have to in Sass!
+// I like combining these with variables to make it easier to read
+// my media queries.
+@media screen and (min-width: $large-phone) {
+	color: $orange;
+}
 
-.page-heading {
-	color: $red;
-	// Sass lets you write your media queries inline if you want.
-	// This is why I'm always forgetting I have to put the class inside
-	// the media query in regular CSS. I never have to in Sass!
-	// I like combining these with variables to make it easier to read
-	// my media queries.
-	@media screen and (min-width: $large-phone) {
-		color: $orange;
-	}
+@media screen and (min-width: $tablet-vertical) {
+	color: $green;
+}
 
-	@media screen and (min-width: $tablet-vertical) {
-		color: $green;
-	}
-
-	@media screen and (min-width: $desktop) {
-		color: $blue;
-	}
+@media screen and (min-width: $desktop) {
+	color: $blue;
 }
