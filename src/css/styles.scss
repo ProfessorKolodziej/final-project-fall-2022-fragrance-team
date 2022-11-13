@@ -106,19 +106,84 @@ h1 {
 		transform: scale(1.1);
 	}
 }
+
+//seasonal choice codes
+.navigation {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: #111;
+	transition: 0.2s;
+	display: flex;
+}
+
+.navigation .navArea {
+	position: relative;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.navigation .navArea ul li {
+	list-style: none;
+}
+
+.navigation .navArea ul li::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #f00;
+	z-index: -1;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.navigation .navArea ul li:nth-child(1)::before {
+	background: #3b975f;
+}
+
+.navigation .navArea ul li:nth-child(2)::before {
+	background: #ab424a;
+}
+
+.navigation .navArea ul li:nth-child(3)::before {
+	background: #dd7c00;
+}
+
+.navigation .navArea ul li:nth-child(4)::before {
+	background: #4261ab;
+}
+
+.navigation .navArea ul li:hover::before {
+	opacity: 1;
+}
+
+.navigation .navArea ul li a {
+	font-size: 3em;
+	font-family: 600;
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.navigation .navArea ul li:hover a {
+	color: rgba(255, 255, 255, 1);
+}
+
 // Sass lets you write your media queries inline if you want.
 // This is why I'm always forgetting I have to put the class inside
 // the media query in regular CSS. I never have to in Sass!
 // I like combining these with variables to make it easier to read
 // my media queries.
-@media screen and (min-width: $large-phone) {
-	color: $orange;
-}
 
-@media screen and (min-width: $tablet-vertical) {
-	color: $green;
-}
+//@media screen and (min-width: $large-phone){ }
 
-@media screen and (min-width: $desktop) {
-	color: $blue;
-}
+//@media screen and (min-width: $tablet-vertical){}
+
+//@media screen and (min-width: $desktop){}
