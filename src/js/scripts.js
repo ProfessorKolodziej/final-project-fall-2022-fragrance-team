@@ -1,10 +1,9 @@
 // Add your scripts here
 const parentBgEl = document.querySelector('.bg');
 const childEls = document.querySelectorAll('.container .text span');
-const textEl = document.querySelector('.text');
 
 childEls.forEach((el) => {
-	el.addEventListener('mouseover', (e) => {
+	el.addEventListener('mouseover', () => {
 		const id = el.getAttribute('data-id');
 		const bgEl = parentBgEl.querySelector(`.id-${id}`);
 
