@@ -8,8 +8,10 @@ childEls.forEach((el) => {
 		const bgEl = parentBgEl.querySelector(`.id-${id}`);
 
 		parentBgEl.querySelectorAll('img').forEach((img) => {
-			img.style.display = 'none';
+			// eslint-disable-next-line
 			img.style.animation = '';
+			// eslint-disable-next-line
+			img.style.display = 'none';
 		});
 		bgEl.style.display = 'block';
 		bgEl.style.animation = 'anima 1s ease forwards';
