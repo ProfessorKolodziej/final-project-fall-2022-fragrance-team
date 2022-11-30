@@ -30,13 +30,9 @@ $blue: #4261ab;
 * {
 	box-sizing: border-box;
 }
-
+// All text color
 a {
 	text-decoration: none;
-}
-
-body {
-	background-color: #fcf9ee;
 }
 
 .container {
@@ -67,18 +63,18 @@ body {
 }
 
 .nbar {
+	border: 60px;
 	margin-top: 450px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	width: 100%;
 }
 
-.text {
+.nbar a {
 	text-decoration: none;
 	font-size: 40px;
-	font-family: 'Poppins', sans-serif;
-	color: aliceblue;
-	border: 60px;
+	font-family: 'Cardo', sans-serif;
+	color: rgba(255, 255, 255, 1);
 }
 
 .bg img {
@@ -87,9 +83,10 @@ body {
 	object-fit: cover;
 }
 
-.container p {
-	color: whitesmoke;
-	font-size: 10px;
+.nbar p {
+	color: rgba(255, 255, 255, 1);
+	font-size: 12px;
+	margin-right: 10px;
 }
 
 h1 {
@@ -110,10 +107,28 @@ h1 {
 
 //seasonal choice codes
 
-.container .navArea ul li {
+.navArea ul li {
 	list-style: none;
+	font-size: 60px;
+	font-weight: 1000;
+	margin-top: 60px;
+	font-family: 'Cardo', sans-serif;
 }
 
+.navArea ul li a {
+	color: #fcf9ee;
+}
+
+nav ul {
+	position: relative;
+	left: 100px;
+	top: 20px;
+}
+
+nav ul li {
+	margin: 10px;
+	font-size: 20px;
+}
 // Sass lets you write your media queries inline if you want.
 // This is why I'm always forgetting I have to put the class inside
 // the media query in regular CSS. I never have to in Sass!
