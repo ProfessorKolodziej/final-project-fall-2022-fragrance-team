@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 // Load CSS Reset from NPM
 // CSS resets "normalize" how browser styles are applied.
 // Try commenting this out and saving. What changes in the browser?
@@ -6,6 +8,7 @@
 // An example of a partial.
 // Check out the _typography.scss file to edit the CSS inside!
 @import "typography";
+@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Roboto:wght@300&display=swap');
 
 // You can still write styles in this file too.
 // Here's an example of how you could write media queries more easily with Sass.
@@ -22,24 +25,103 @@ $orange: #dd7c00;
 $green: #3b975f;
 $blue: #4261ab;
 
-.page-heading {
-	color: $red;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 
-	// Sass lets you write your media queries inline if you want.
-	// This is why I'm always forgetting I have to put the class inside
-	// the media query in regular CSS. I never have to in Sass!
-	// I like combining these with variables to make it easier to read
-	// my media queries.
+* {
+	box-sizing: border-box;
+}
 
-	@media screen and (min-width: $large-phone) {
-		color: $orange;
+a {
+	text-decoration: none;
+}
+
+body {
+	background-color: #fcf9ee;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+	height: 100%;
+	justify-content: center;
+}
+
+.bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.bg::after {
+	content: "";
+	left: 0;
+	top: 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.589);
+}
+
+.nbar {
+	margin-top: 450px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	width: 100%;
+}
+
+.text {
+	text-decoration: none;
+	font-size: 40px;
+	font-family: 'Poppins', sans-serif;
+	color: aliceblue;
+	border: 60px;
+}
+
+.bg img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.container p {
+	color: whitesmoke;
+	font-size: 10px;
+}
+
+h1 {
+	color: red;
+}
+
+@keyframes anima {
+	0% {
+		opacity: 0.6;
+		transform: scale(1);
 	}
 
-	@media screen and (min-width: $tablet-vertical) {
-		color: $green;
-	}
-
-	@media screen and (min-width: $desktop) {
-		color: $blue;
+	100% {
+		opacity: 1;
+		transform: scale(1.1);
 	}
 }
+
+//seasonal choice codes
+
+.container .navArea ul li {
+	list-style: none;
+}
+
+// Sass lets you write your media queries inline if you want.
+// This is why I'm always forgetting I have to put the class inside
+// the media query in regular CSS. I never have to in Sass!
+// I like combining these with variables to make it easier to read
+// my media queries.
+
+//@media screen and (min-width: $large-phone){ }
+
+//@media screen and (min-width: $tablet-vertical){}
+
+//@media screen and (min-width: $desktop){}
