@@ -1,0 +1,53 @@
+
+.BigContainer {
+	background-color: #dd7c00;
+	
+}
+
+.selectionMainPanel {
+    display: block;
+    width: 40%;
+}
+
+.selectionMainPanel > * {
+    width: 100%;
+}
+.mainPage {
+    display:flex;
+}
+.interactivePanel{
+    width:50%;
+    display: flex;
+}
+/* .occationInfo {
+    display: none;
+} */
+/* .occationHeader{
+    display: none;
+} */
+.subsectionPanel {
+    display:none;
+    /* visibility:hidden; */
+}
+.subsectionInfoHeader{
+    display:inherit;
+    /* visibility: inherit; */
+    /* display: none; */
+}
+/* .occationButtons {
+    display: flex;
+    flex-direction: column;
+} */
+
+.selectionButtons {
+    display: flex;
+    flex-direction: column;
+}
+
+.nextSelectionButton{
+    float:right;
+}
+
+.inProgressBottle{
+    display:none;
+}
