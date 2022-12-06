@@ -1,5 +1,3 @@
-
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 // Load CSS Reset from NPM
 // CSS resets "normalize" how browser styles are applied.
 // Try commenting this out and saving. What changes in the browser?
@@ -31,10 +29,15 @@ $blue: #4261ab;
 	box-sizing: border-box;
 }
 // All text color
+
+html,body {
+	overflow-x: hidden;
+}
+
 a {
 	text-decoration: none;
 }
-
+//main page/seasonal choice codes
 .container {
 	width: 80%;
 	margin: auto;
@@ -61,7 +64,7 @@ a {
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.589);
 }
-
+//main page/seasonal choice codes
 .nbar {
 	border: 60px;
 	margin-top: 450px;
@@ -89,10 +92,6 @@ a {
 	margin-right: 10px;
 }
 
-h1 {
-	color: red;
-}
-
 @keyframes anima {
 	0% {
 		opacity: 0.6;
@@ -104,9 +103,7 @@ h1 {
 		transform: scale(1.1);
 	}
 }
-
 //seasonal choice codes
-
 .navArea ul li {
 	list-style: none;
 	font-size: 60px;
@@ -129,6 +126,70 @@ nav ul li {
 	margin: 10px;
 	font-size: 20px;
 }
+
+.SCnav a {
+	color: #fcf9ee;
+	font-family: 'Cardo', sans-serif;
+	text-align: center;
+	position: relative;
+
+}
+
+.SCnav h1 {
+	color: #fcf9ee;
+	font-family: 'Cardo', sans-serif;
+	text-align: center;
+}
+
+//gallery page
+.Gnav ul {
+	background-color: #fcf9ee;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.Gh1 {
+	color: rgba(9, 8, 4, 1);
+	background-color: #fcf9ee;
+	margin-bottom: 0px;
+}
+
+.column {
+	background-color: #fcf9ee;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	width: 100%;
+}
+
+.column img {
+	margin-top: 20px;
+	width: 100%;
+}
+//about us page code
+.about {
+	background-color: #fcf9ee;
+}
+
+.about h2 {
+	font-family: 'Cardo', sans-serif;
+	font-size: 30px;
+	font-weight: 1000;
+}
+
+.about p {
+	font-family: 'Cardo', sans-serif;
+	font-size: 20px;
+}
+//@media screen and (max-width: 800px) {
+//.column {
+//flex: 50%;
+//max-width: 50%;
+//}
+//}
+//.column {
+//flex: 100%;
+//max-width: 100%;
+//}
 // Sass lets you write your media queries inline if you want.
 // This is why I'm always forgetting I have to put the class inside
 // the media query in regular CSS. I never have to in Sass!

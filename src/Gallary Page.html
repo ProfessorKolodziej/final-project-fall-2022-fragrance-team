@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Update your description here" />
+	<meta name="desrciption" content="Update your desrciption here" />
 	<title>Update your title here</title>
 	<!--
 		Webpack will automatically link your CSS file for you.
@@ -20,9 +20,7 @@
 		Webpack will automatically link your JS file for you.
 		Work in the src/js folder.
 	-->
-	<header>
-		
-		<nav>
+		<nav class="Gnav">
 			<ul>
 				<li style="display:inline"><a href="index.html">Main Page</a></li>
 				<li style="display:inline"><a href="Seasonal Choice.html">Seasonal Choice</a></li>
@@ -31,83 +29,38 @@
 				<li style="display:inline"><a href="About Us.html">About Us</a></li>
 			</ul>
 		</nav>
-		<h1>GALLARY</h1>
-	</header>
-	<div className="products">
-		<div className="left">
-			<div className="filterItem">
-				<h2>Product Brands</h2>
-				<div className="InputItem">
-					<input type="checkbox" id="1" value={1}/>
-					<label htmlFor="1">CREED</label>
-				</div>
-				<div className="InputItem">
-					<input type="checkbox" id="2" value={2}/>
-					<label htmlFor="2">CHANEL</label>
-				</div>
-				<div className="InputItem">
-					<input type="checkbox" id="3" value={3}/>
-					<label htmlFor="3">DIPTYQUE</label>
-				</div>
-				<div className="InputItem">
-					<input type="checkbox" id="4" value={4}/>
-					<label htmlFor="4">DIOR</label>
-				</div>
-				<div className="InputItem">
-					<input type="checkbox" id="5" value={5}/>
-					<label htmlFor="5">JO MALONE</label>
-				</div>
-				<div className="InputItem">
-					<input type="checkbox" id="6" value={6}/>
-					<label htmlFor="6">MAISON MARGIELA</label>
-				</div>
-				<div className="InputItem">
-					<input type="checkbox" id="7" value={7}/>
-					<label htmlFor="7">PRADA</label>
-				</div>
-				<div className="InputItem">
-					<input type="checkbox" id="8" value={8}/>
-					<label htmlFor="8">TOM FORD</label>
-				</div>
+		<h1 class="Gh1">GALLERY</h1>
+		<div class="row">
+			<div class="column">
+				<img src="./images/1. Aventus.png">
+				<img src="./images/2. Blackberry.png">
+				<img src="./images/3._black_orchid-removebg-preview.png">
+				<img src="./images/4._Sauvage-removebg-preview.png">
 			</div>
-			<div className="filterItem"></div>
-			<h2>Filter by price</h2>
-			<div classNam="inputItem">
-				<span>0</span>
-				<input type="range" min{0} max{1000} />
-				<span>1000</span>
+			<div class="column">
+				<img src="./images/5. Replica Fire Place.png">
+				<img src="./images/6._Replica_Lazy_Sunday_Morning-removebg-preview.png">
+				<img src="./images/7._Jazz_Club-removebg-preview.png">
+				<img src="./images/8._Replica_Sailing-removebg-preview.png">
 			</div>
-			<div className="filterItem">
-				<h2>Sort bydsdsds</h2>
-				<div className="inputItem">
-					<input type="radio" id="asc" value="asc" name="price" />
-					<label htmlFor="desc">Price (Lowest first)</label>
-				</div>
-				<div className="inputItem">
-					<input type="radio" id="asc" value="desc" name="price" />
-					<label htmlFor="desc">Price (Highest first)</label>
-				</div>
+			<div class="column">
+				<img src="./images/9._Original_Musk-removebg-preview.png">
+				<img src="./images/10._Neroli_Portofino-removebg-preview.png">
+				<img src="./images/11. Bleu de Chanel.png">
+				<img src="./images/12._Tobacco_Toscano-removebg-preview.png">
+			</div>
+			<div class="column">
+				<img src="./images/13. 34 Boulevard V2.png">
+				<img src="./images/14._Angele_s_Share_EDP-removebg-preview.png">
+				<img src="./images/15._Allure_Homme_Sport-removebg-preview.png">
+				<img src="./images/16._Vodka_on_the_Rocks-removebg-preview.png">
+			</div>
+			<div class="column">
+				<img src="./images/17. Oud Wood V2.png">
+				<img src="./images/18. Fabulous V2.png">
+				<img src="./images/19._Millesime_Imperial-removebg-preview.png">
+				<img src="./images/20. Luna Sport Rossa.png">
 			</div>
 		</div>
-		<div class="filter-price">
-			<p>SORT BY PRICE</p>
-			<p>PRICE ASCENDING</p>
-			<p>PRICE ASCENDING</p>
-			<p>SET PRICE RANGE</p>
-		</div>
-		<div class="filter-brands">
-			<ul>
-				<li>CREED</li>
-				<li>CHANEL</li>
-				<li>DIPTYQUE</li>
-				<li>DIOR</li>
-				<li>JO MALONE</li>
-				<li>MAISON MARGIELA</li>
-				<li>PRADA</li>
-				<li>TOM FORD</li>
-			</ul>
-		</div>
-	</section>
 </body>
-
 </html>
