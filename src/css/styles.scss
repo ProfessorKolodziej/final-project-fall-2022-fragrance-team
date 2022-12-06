@@ -28,16 +28,39 @@ $blue: #4261ab;
 * {
 	box-sizing: border-box;
 }
-// All text color
 
-html,body {
+// All text color
+html body {
 	overflow-x: hidden;
+	background-color: #fcf9ee;
 }
 
 a {
 	text-decoration: none;
+	color: black;
 }
+
+nav {
+	text-align: center;
+	font-family: 'Cardo', sans-serif;
+	color: black;
+}
+
+h1 {
+	font-family: 'Cardo', sans-serif;
+	color: black;
+}
+
 //main page/seasonal choice codes
+.mainpage-logo {
+	position: relative;
+	text-align: center;
+	color: white;
+	font-weight: lighter;
+	font-size: 70px;
+	margin-top: 100px;
+}
+
 .container {
 	width: 80%;
 	margin: auto;
@@ -64,13 +87,15 @@ a {
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.589);
 }
+
 //main page/seasonal choice codes
 .nbar {
 	border: 60px;
-	margin-top: 450px;
+	margin-top: 300px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	width: 100%;
+	text-align: center;
 }
 
 .nbar a {
@@ -103,59 +128,48 @@ a {
 		transform: scale(1.1);
 	}
 }
+
 //seasonal choice codes
 .navArea ul li {
 	list-style: none;
-	font-size: 60px;
-	font-weight: 1000;
+	font-size: 50px;
 	margin-top: 60px;
 	font-family: 'Cardo', sans-serif;
 }
 
 .navArea ul li a {
-	color: #fcf9ee;
+	color: white;
 }
 
 nav ul {
 	position: relative;
-	left: 100px;
 	top: 20px;
 }
 
 nav ul li {
 	margin: 10px;
-	font-size: 20px;
+}
+
+.SCnav {
+	background-color: #fcf9ee;
+	width: 100%;
+	padding-top: 1px;
+	padding-bottom: 20px;
 }
 
 .SCnav a {
-	color: #fcf9ee;
+	color: black;
 	font-family: 'Cardo', sans-serif;
-	text-align: center;
 	position: relative;
-
 }
 
 .SCnav h1 {
-	color: #fcf9ee;
+	color: black;
 	font-family: 'Cardo', sans-serif;
-	text-align: center;
 }
 
 //gallery page
-.Gnav ul {
-	background-color: #fcf9ee;
-	margin-bottom: 0px;
-	margin-top: 0px;
-}
-
-.Gh1 {
-	color: rgba(9, 8, 4, 1);
-	background-color: #fcf9ee;
-	margin-bottom: 0px;
-}
-
 .column {
-	background-color: #fcf9ee;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	width: 100%;
@@ -165,14 +179,10 @@ nav ul li {
 	margin-top: 20px;
 	width: 100%;
 }
-//about us page code
-.about {
-	background-color: #fcf9ee;
-}
 
+//about us page code
 .about h2 {
 	font-family: 'Cardo', sans-serif;
-	font-size: 30px;
 	font-weight: 1000;
 }
 
@@ -180,6 +190,19 @@ nav ul li {
 	font-family: 'Cardo', sans-serif;
 	font-size: 20px;
 }
+
+.aboutus-ourteam {
+	text-align: center;
+	margin: 2em;
+	margin-top: 5em;
+}
+
+.aboutus-ourwhy {
+	text-align: center;
+	margin: 15%;
+	margin-top: 3em;
+}
+
 //@media screen and (max-width: 800px) {
 //.column {
 //flex: 50%;
