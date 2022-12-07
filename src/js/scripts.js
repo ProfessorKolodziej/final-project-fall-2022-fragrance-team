@@ -27,7 +27,6 @@ fetch(url, { headers: { Authorization: `Token hvolOlzFmvicJEK9B6yyyM78Yj4F7G3Z` 
   .then(function(data) {
     for ( let i = 0; i < data.results.length; i++ ) {
       console.log(data.results[i]);
-      
       const markup = `<li>
         <h2>${data.results[i]["Name"]}</h2>
       </li>`
