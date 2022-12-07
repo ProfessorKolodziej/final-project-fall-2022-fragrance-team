@@ -2,10 +2,26 @@
 window.onload = function (){
     const mainPic = document.getElementsByClassName("mainPic")[0];
     mainPic.activeId = "empty";
+    insideSection(0);
+    
 }
-otherFunction = function () {
-    console.log("&&&&&&&&&&&&&&")
-}
+const url = 'https://api.baserow.io/api/database/rows/table/118884/?user_field_names=true';
+
+const list = document.querySelector('#list');
+
+fetch(url, { headers: { Authorization: `Token hvolOlzFmvicJEK9B6yyyM78Yj4F7G3Z` } })
+  .then(response => response.json())
+  .then(function(data) {
+    for ( let i = 0; i < data.results.length; i++ ) {
+      console.log(data.results[i]);
+      
+      const markup = `<li>
+        <h2>${data.results[i]["Name"]}</h2>
+      </li>`
+      list.insertAdjacentHTML('beforeend', markup);
+    }
+});
+
 loadRightPicture = function (className){
     const mainPic = document.getElementsByClassName("mainPic")[0];
     if (mainPic !== className) {
@@ -15,25 +31,38 @@ loadRightPicture = function (className){
     }
     
 }
-on_click = function (className) {
-    const suffix = 'Info'; // 'SectionHeader'
+insideSection = function (classNumber){
+    if (classNumber > 4) return;
     const showList = ["occation",
                       "fashion",
                       "feeling",
                       "scent",
                       "price"];
+    const className = showList[classNumber];
     showList.forEach(sectionName => {
         if (sectionName === className) {
             console.log("matched! ", sectionName);
-            toBeDisplayed = document.getElementsByClassName(sectionName+ suffix)[0];
-            // toBeDisplayed.style.visibility = "visible";
-            toBeDisplayed.style.display = "inline";
+            selectedButton = document.getElementsByClassName(sectionName+ "Button")[0];
+            selectedButton.style.backgroundColor = 'black';
+            selectedButton.style.color = 'white';
+            toBeDisplayedSection = document.getElementsByClassName(sectionName+ "Info")[0];
+            toBeDisplayedSection.style.display = "contents";
+            toBeDisplayedHeader = document.getElementsByClassName(sectionName+ "SectionHeader")[0];
+            toBeDisplayedHeader.style.display = "contents";
+            toBeDisplayedButtons = document.getElementsByClassName(sectionName+ "Buttons")[0];
+            toBeDisplayedButtons.style.display = "contents";
         }
         else {
             console.log("NOT matched ", sectionName);
-            toBeHidden = document.getElementsByClassName(sectionName+ suffix)[0];
-            // toBeHidden.style.visibility = "hidden";
-            toBeHidden.style.display = "none";
+            unselectedButton = document.getElementsByClassName(sectionName+ "Button")[0];
+            unselectedButton.style.backgroundColor = 'white';
+            unselectedButton.style.color = 'black';
+            toBeHiddenSection = document.getElementsByClassName(sectionName+ "Info")[0];
+            toBeHiddenSection.style.display = "none";
+            toBeHiddenHeader = document.getElementsByClassName(sectionName+ "SectionHeader")[0];
+            toBeHiddenHeader.style.display = "none";
+            toBeHiddenButtons = document.getElementsByClassName(sectionName+ "Buttons")[0];
+            toBeHiddenButtons.style.display = "none";
         }
     })
     var sectionInProgress = document.getElementsByClassName(className+"Buttons")[0];
@@ -44,116 +73,54 @@ on_click = function (className) {
     while (index <  selectionNum) {
         let button = sectionButtons[index++];
         button.onclick = function () {
-            // alert("clicked!");
             if (sectionInProgress.activeButton !== button.id){
                 const prevSelectedButton = document.getElementById(sectionInProgress.activeButton);
                 if (prevSelectedButton) {
-                    // prevSelectedButton.style.background="gray";
-                    prevSelectedButton.style.color="black";
+                    prevSelectedButton.style.background="black";
+                    prevSelectedButton.style.color="white";
                 }
                 
-                // button.style.background="black";
-                button.style.color="green";
+                button.style.background="white";
+                button.style.color="black";
                 sectionInProgress.activeButton = button.id;
-            }
-            
-            otherFunction();
+            }           
             loadRightPicture(className);
-            // this.hiworld();
         }
     }
-    // var fragrancePage = {};
+    const nextButton = document.getElementsByClassName(className+"NextButton")[0];
+    nextButton.addEventListener('click', () => {
+        console.log("hahaha!");
+        insideSection(classNumber+1);
+    })
+
+}
+on_click = function (classNumber) {
+    insideSection(classNumber);
+}
+submitCallback = function (){
+    const showList = ["occation",
+                      "fashion",
+                      "feeling",
+                      "scent",
+                      "price"];
+    const result = [];
+    var notCompleteFlag = 0;
+    showList.forEach((sectionName) => {
+        if (!notCompleteFlag) {
+            const sectionSelected = document.getElementsByClassName(sectionName+"Buttons")[0];
+            if (!sectionSelected.activeButton){
+                alert("You haven't made selection for "+ sectionName);
+                notCompleteFlag = 1;
+                return;
+            }
+            else {
+                result.push(sectionSelected.activeButton);
+            }
+        }
+        
+    })
+    if (!notCompleteFlag) {
+        alert("Thank you for your submission! Here's your selections: \n" + result );
+    }
     
-    // fragrancePage.occationButton = document.getElementsByClassName("occationButton")[0]; 
-    // fragrancePage.fashionButton = document.getElementsByClassName("fashionButton")[0]; 
-    // fragrancePage.feelingButton = document.getElementsByClassName("feelingButton")[0]; 
-    // fragrancePage.scentButton = document.getElementsByClassName("scentButton")[0]; 
-    // fragrancePage.priceButton = document.getElementsByClassName("priceButton")[0]; 
-
-    // fragrancePage.showList = ["occation","fashion", "feeling", "scent", "price"];
-    // fragrancePage.mainSectionNum = fragrancePage.showList.length;
-    // fragrancePage.mainButtonList = [];
-    // fragrancePage.showList.forEach((className) => {
-    //     fragrancePage.mainButtonList.push(document.getElementsByClassName(className+"Button")[0]);
-    // })
-    // // [fragrancePage.occationButton, fragrancePage.fashionnButton, fragrancePage.feelingButton, fragrancePage.scentButton, fragrancePage.priceButton] = [...fragrancePage.mainButtonList];
-    
-    // var someFunction = function (){
-    //     console.log ("some function ???")
-    // }
-    // var sectionCallback = function (className) {
-    //     console.log("something happeneddd" + className);
-    //     someFunction();
-
-    //     const suffix = 'Info'; // 'SectionHeader'
-    //     fragrancePage.showList.forEach(sectionName => {
-    //         if (sectionName === className) {
-    //             console.log("matched! ", sectionName);
-    //             toBeDisplayed = document.getElementsByClassName(sectionName+ suffix)[0];
-    //             // toBeDisplayed.style.visibility = "visible";
-    //             toBeDisplayed.style.display = "inline";
-    //         }
-    //         else {
-    //             console.log("NOT matched ", sectionName);
-    //             toBeHidden = document.getElementsByClassName(sectionName+ suffix)[0];
-    //             // toBeHidden.style.visibility = "hidden";
-    //             toBeHidden.style.display = "none";
-    //         }
-    //     })
-
-
-    // }.bind(fragrancePage);
-    // var i = 0;
-    // // while (i< fragrancePage.mainSectionNum){
-    // //     fragrancePage.mainButtonList[i].addEventListener('click', sectionCallback(fragrancePage.showList[i]));
-    // //     i++;
-    // // }
-    
-    // fragrancePage.occationButton.addEventListener('click', sectionCallback("occation"));
-    // fragrancePage.fashionButton.addEventListener('click', sectionCallback("fashion"));
-    
-
-  }
-// var occationButton = document.getElementsByClassName("occationButton")[0]; 
-
-
-// occationButton.addEventListener('click', () => {
-//     console.log("something happeneddd")
-// })
-// function buttonClick(className) {
-//     console.log("buttttonn clicked");
-//     const suffix = 'Info'; // 'SectionHeader'
-//     const showList = ["occation",
-//                       "fashion",
-//                       "feeling",
-//                       "scent",
-//                       "price"];
-//     showList.forEach(sectionName => {
-//         if (sectionName === className) {
-//             console.log("matched! ", sectionName);
-//             toBeDisplayed = document.getElementsByClassName(sectionName+ suffix)[0];
-//             // toBeDisplayed.style.visibility = "visible";
-//             toBeDisplayed.style.display = "inline";
-//         }
-//         else {
-//             console.log("NOT matched ", sectionName);
-//             toBeHidden = document.getElementsByClassName(sectionName+ suffix)[0];
-//             // toBeHidden.style.visibility = "hidden";
-//             toBeHidden.style.display = "none";
-//         }
-//     })
-    
-//     var sectionInProgress = document.getElementsByClassName(className+"Buttons")[0];
-
-//     var sectionButtons = sectionInProgress.getElementsByClassName("singleButton"); 
-//     const selectionNum = sectionButtons.length;
-//     var index = 0;
-//     while (index <  selectionNum) {
-//         let button = sectionButtons[index++];
-//         button.onclick = function () {
-//             alert("clicked!")
-//             this.hiworld();
-//         }
-//     }
-// }
-
+}
