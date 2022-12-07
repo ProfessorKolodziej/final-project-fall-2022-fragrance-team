@@ -45,6 +45,7 @@ h1 {
 	color: black;
 }
 
+<<<<<<< Updated upstream
 p {
 	font-family: 'Cardo', sans-serif;
 }
@@ -223,8 +224,109 @@ h1 {
 		font-size: 40px;
 		margin-top: 60px;
 		font-family: 'Cardo', sans-serif;
+=======
+// All text color
+html body {
+	overflow-x: hidden;
+	background-color: #fcf9ee;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+nav {
+	text-align: center;
+	font-family: 'Cardo', sans-serif;
+	color: black;
+}
+
+h1 {
+	font-family: 'Cardo', sans-serif;
+	color: black;
+}
+
+//main page/seasonal choice codes
+.mainpage-logo {
+	position: relative;
+	text-align: center;
+	color: white;
+	font-weight: lighter;
+	font-size: 70px;
+	margin-top: 100px;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+	height: 100%;
+	justify-content: center;
+}
+
+.bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.bg::after {
+	content: "";
+	left: 0;
+	top: 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.589);
+}
+
+//main page/seasonal choice codes
+.nbar {
+	border: 60px;
+	margin-top: 300px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	width: 100%;
+	text-align: center;
+}
+
+.nbar a {
+	text-decoration: none;
+	font-size: 40px;
+	font-family: 'Cardo', sans-serif;
+	color: rgba(255, 255, 255, 1);
+}
+
+.bg img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.nbar p {
+	color: rgba(255, 255, 255, 1);
+	font-size: 12px;
+	margin-right: 10px;
+}
+
+@keyframes anima {
+	0% {
+		opacity: 0.6;
+		transform: scale(1);
 	}
 
+	100% {
+		opacity: 1;
+		transform: scale(1.1);
+>>>>>>> Stashed changes
+	}
+}
+
+<<<<<<< Updated upstream
 	.SCnav {
 		background-color: #fcf9ee;
 		width: 100%;
@@ -288,6 +390,46 @@ h1 {
 		font-family: 'Cardo', sans-serif;
 		color: rgba(255, 255, 255, 1);
 	}
+=======
+//seasonal choice codes
+.navArea ul li {
+	list-style: none;
+	font-size: 50px;
+	margin-top: 60px;
+	font-family: 'Cardo', sans-serif;
+}
+
+.navArea ul li a {
+	color: white;
+}
+
+nav ul {
+	position: relative;
+	top: 20px;
+}
+
+nav ul li {
+	margin: 10px;
+}
+
+.SCnav {
+	background-color: #fcf9ee;
+	width: 100%;
+	padding-top: 1px;
+	padding-bottom: 20px;
+}
+
+.SCnav a {
+	color: black;
+	font-family: 'Cardo', sans-serif;
+	position: relative;
+}
+
+.SCnav h1 {
+	color: black;
+	font-family: 'Cardo', sans-serif;
+}
+>>>>>>> Stashed changes
 
 	.nbar p {
 		color: rgba(255, 255, 255, 1);
@@ -321,12 +463,17 @@ h1 {
 		left: 15px;
 		position: fixed;
 	}
+<<<<<<< Updated upstream
 	//gallery page code
+=======
+//gallery page
+>>>>>>> Stashed changes
 	.Gh1 {
 		text-align: center;
 		margin-top: 15px;
 	}
 
+<<<<<<< Updated upstream
 	.column {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -343,6 +490,22 @@ h1 {
 	}
 	//main page
 	.mainpage-logo {
+=======
+.column {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	width: 100%;
+}
+
+.column img {
+	margin-top: 20px;
+	width: 100%;
+}
+
+	.card {
+		height: 340px;
+		width: 250px;
+>>>>>>> Stashed changes
 		position: relative;
 		text-align: center;
 		color: white;
@@ -372,6 +535,7 @@ h1 {
 		font-size: 12px;
 		margin-right: 10px;
 	}
+<<<<<<< Updated upstream
 	//seasonal choice codes
 	.navArea ul li {
 		list-style: none;
@@ -415,4 +579,33 @@ h1 {
 	// the media query in regular CSS. I never have to in Sass!
 	// I like combining these with variables to make it easier to read
 	// my media queries.
+=======
+//about us page code
+.about h2 {
+	font-family: 'Cardo', sans-serif;
+	font-weight: 1000;
+}
+
+.about p {
+	font-family: 'Cardo', sans-serif;
+	font-size: 20px;
+}
+
+.aboutus-ourteam {
+	text-align: center;
+	margin: 2em;
+	margin-top: 5em;
+}
+
+.aboutus-ourwhy {
+	text-align: center;
+	margin: 15%;
+	margin-top: 3em;
+}
+// Sass lets you write your media queries inline if you want.
+// This is why I'm always forgetting I have to put the class inside
+// the media query in regular CSS. I never have to in Sass!
+// I like combining these with variables to make it easier to read
+// my media queries.
+>>>>>>> Stashed changes
 }
