@@ -40,27 +40,15 @@ a {
 	color: black;
 }
 
-nav {
-	text-align: center;
-	font-family: 'Cardo', sans-serif;
-	color: black;
-}
-
 h1 {
 	font-family: 'Cardo', sans-serif;
 	color: black;
 }
 
-//main page/seasonal choice codes
-.mainpage-logo {
-	position: relative;
-	text-align: center;
-	color: white;
-	font-weight: lighter;
-	font-size: 70px;
-	margin-top: 100px;
+p {
+	font-family: 'Cardo', sans-serif;
 }
-
+//main page codes
 .container {
 	width: 80%;
 	margin: auto;
@@ -88,33 +76,10 @@ h1 {
 	background-color: rgba(0, 0, 0, 0.589);
 }
 
-//main page/seasonal choice codes
-.nbar {
-	border: 60px;
-	margin-top: 300px;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	width: 100%;
-	text-align: center;
-}
-
-.nbar a {
-	text-decoration: none;
-	font-size: 40px;
-	font-family: 'Cardo', sans-serif;
-	color: rgba(255, 255, 255, 1);
-}
-
 .bg img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-}
-
-.nbar p {
-	color: rgba(255, 255, 255, 1);
-	font-size: 12px;
-	margin-right: 10px;
 }
 
 @keyframes anima {
@@ -129,57 +94,69 @@ h1 {
 	}
 }
 
-//seasonal choice codes
-.navArea ul li {
-	list-style: none;
-	font-size: 50px;
-	margin-top: 60px;
-	font-family: 'Cardo', sans-serif;
-}
-
 .navArea ul li a {
-	color: white;
+	color: #fcf9ee;
 }
-
-nav ul {
-	position: relative;
-	top: 20px;
-}
-
-nav ul li {
-	margin: 10px;
-}
-
-.SCnav {
-	background-color: #fcf9ee;
-	width: 100%;
-	padding-top: 1px;
-	padding-bottom: 20px;
-}
-
-.SCnav a {
+//seasonal choice codes
+.SCnav a,
+h1 {
 	color: black;
 	font-family: 'Cardo', sans-serif;
 	position: relative;
 }
-
-.SCnav h1 {
-	color: black;
-	font-family: 'Cardo', sans-serif;
-}
-
-//gallery page
-.column {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	width: 100%;
-}
-
+//gallery page code
 .column img {
 	margin-top: 20px;
 	width: 100%;
 }
 
+.card {
+	height: 340px;
+	width: 250px;
+	position: relative;
+	transition: all 0.5s linear;
+	transform-style: preserve-3d;
+}
+
+.front,
+.back {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+}
+
+.front {
+	background-color: #fcf9ee;
+	z-index: 2;
+	backface-visibility: hidden;
+}
+
+.back {
+	background-color: #fcf9ee;
+	z-index: 1;
+	transform: rotateY(180deg);
+}
+
+.back h3 {
+	text-align: center;
+	font-family: 'Cardo', sans-serif;
+	font-size: 20px;
+}
+
+.back p {
+	text-align: center;
+	font-family: 'Cardo', sans-serif;
+	font-size: 15px;
+	position: fixed;
+	bottom: 100px;
+}
+
+.flip:hover .card {
+	transform: rotateY(180deg);
+}
 //about us page code
 .about h2 {
 	font-family: 'Cardo', sans-serif;
@@ -203,24 +180,239 @@ nav ul li {
 	margin-top: 3em;
 }
 
-//@media screen and (max-width: 800px) {
-//.column {
-//flex: 50%;
-//max-width: 50%;
-//}
-//}
-//.column {
-//flex: 100%;
-//max-width: 100%;
-//}
-// Sass lets you write your media queries inline if you want.
-// This is why I'm always forgetting I have to put the class inside
-// the media query in regular CSS. I never have to in Sass!
-// I like combining these with variables to make it easier to read
-// my media queries.
+@media screen and(max-width: 767px) {
+	nav {
+		text-align: center;
+		font-family: 'Cardo', sans-serif;
+		color: black;
+		font-size: 15px;
+	}
 
-//@media screen and (min-width: $large-phone){ }
+	.mainpage-logo {
+		position: relative;
+		text-align: center;
+		color: white;
+		font-weight: lighter;
+		font-size: 50px;
+		margin-top: 150px;
+	}
+	//main page/seasonal choice codes
+	.nbar {
+		margin-top: 250px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		width: 100%;
+		text-align: center;
+	}
 
-//@media screen and (min-width: $tablet-vertical){}
+	.nbar a {
+		text-decoration: none;
+		font-size: 25px;
+		font-family: 'Cardo', sans-serif;
+		color: rgba(255, 255, 255, 1);
+	}
 
-//@media screen and (min-width: $desktop){}
+	.nbar p {
+		color: rgba(255, 255, 255, 1);
+		font-size: 10px;
+		margin-right: 10px;
+	}
+	//seasonal choice code
+	.navArea ul li {
+		list-style: none;
+		font-size: 40px;
+		margin-top: 60px;
+		font-family: 'Cardo', sans-serif;
+	}
+
+	.SCnav {
+		background-color: #fcf9ee;
+		width: 100%;
+		padding-top: 1px;
+	}
+
+	.seasontop {
+		font-family: 'Cardo', sans-serif;
+		font-size: 15px;
+		text-align: center;
+	}
+
+	.seasontop a {
+		font-size: 20px;
+		top: 6px;
+		left: 15px;
+		position: fixed;
+	}
+
+	//gallery page
+	.Gh1 {
+		text-align: center;
+		margin-top: 15px;
+	}
+
+	.column {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		width: 100%;
+	}
+}
+
+@media screen and(min-width: 768px)and(max-width: 1023px) {
+	nav {
+		text-align: center;
+		font-family: 'Cardo', sans-serif;
+		color: black;
+		font-size: 20px;
+	}
+
+	.mainpage-logo {
+		position: relative;
+		text-align: center;
+		color: white;
+		font-weight: lighter;
+		font-size: 60px;
+		margin-top: 150px;
+	}
+	//main page/seasonal choice codes
+	.nbar {
+		margin-top: 250px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		width: 100%;
+		text-align: center;
+	}
+
+	.nbar a {
+		text-decoration: none;
+		font-size: 30px;
+		font-family: 'Cardo', sans-serif;
+		color: rgba(255, 255, 255, 1);
+	}
+
+	.nbar p {
+		color: rgba(255, 255, 255, 1);
+		font-size: 15px;
+		margin-right: 10px;
+	}
+	//seasonal choice code
+	.navArea ul li {
+		list-style: none;
+		font-size: 40px;
+		margin-top: 60px;
+		font-family: 'Cardo', sans-serif;
+	}
+
+	.SCnav {
+		background-color: #fcf9ee;
+		width: 100%;
+		padding-top: 1px;
+		padding-bottom: 20px;
+	}
+
+	.seasontop {
+		font-family: 'Cardo', sans-serif;
+		font-size: 15px;
+		text-align: center;
+	}
+
+	.seasontop a {
+		font-size: 20px;
+		top: 6px;
+		left: 15px;
+		position: fixed;
+	}
+	//gallery page code
+	.Gh1 {
+		text-align: center;
+		margin-top: 15px;
+	}
+
+	.column {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	nav {
+		text-align: center;
+		font-family: 'Cardo', sans-serif;
+		color: black;
+		font-size: 20px;
+	}
+	//main page
+	.mainpage-logo {
+		position: relative;
+		text-align: center;
+		color: white;
+		font-weight: lighter;
+		font-size: 70px;
+		margin-top: 100px;
+	}
+	//main page
+	.nbar {
+		border: 60px;
+		margin-top: 300px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		width: 100%;
+		text-align: center;
+	}
+
+	.nbar a {
+		text-decoration: none;
+		font-size: 40px;
+		font-family: 'Cardo', sans-serif;
+		color: rgba(255, 255, 255, 1);
+	}
+
+	.nbar p {
+		color: rgba(255, 255, 255, 1);
+		font-size: 12px;
+		margin-right: 10px;
+	}
+	//seasonal choice codes
+	.navArea ul li {
+		list-style: none;
+		font-size: 50px;
+		margin-top: 60px;
+		font-family: 'Cardo', sans-serif;
+	}
+
+	.SCnav {
+		background-color: #fcf9ee;
+		width: 100%;
+		padding-top: 1px;
+		padding-bottom: 20px;
+	}
+
+	.seasontop {
+		font-family: 'Cardo', sans-serif;
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.seasontop a {
+		font-size: 25px;
+		top: 20px;
+		left: 30px;
+		position: fixed;
+	}
+	//gallery page
+	.Gh1 {
+		text-align: center;
+		margin-top: 30px;
+	}
+
+	.column {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		width: 100%;
+	}
+	// Sass lets you write your media queries inline if you want.
+	// This is why I'm always forgetting I have to put the class inside
+	// the media query in regular CSS. I never have to in Sass!
+	// I like combining these with variables to make it easier to read
+	// my media queries.
+}
