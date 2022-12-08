@@ -33,7 +33,6 @@ function loadRightPicture(className) {
 		mainPic.activeId = className;
 	}
 }
-
 function insideSection(classNumber) {
 	if (classNumber > 4) return;
 	const showList = ['occation',
