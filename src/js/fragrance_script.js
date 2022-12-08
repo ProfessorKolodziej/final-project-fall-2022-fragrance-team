@@ -16,7 +16,7 @@ fetch(url, { headers: { Authorization: 'Token hvolOlzFmvicJEK9B6yyyM78Yj4F7G3Z' 
 	.then((data) => {
 		// eslint-disable-next-line
 		for (let i = 0; i < data.results.length; i++) {
-			console.log(data.results[i]);
+
 
 			const markup = `<li>
         <h2>${data.results[i].Name}</h2>
@@ -74,6 +74,7 @@ function insideSection(classNumber) {
 	while (index < selectionNum) {
 		// eslint-disable-next-line
 		const button = sectionButtons[index++];
+		
 		button.onclick = function () {
 			if (sectionInProgress.activeButton !== button.id) {
 				const prevSelectedButton = document.getElementById(sectionInProgress.activeButton);
@@ -96,7 +97,7 @@ function insideSection(classNumber) {
 	});
 }
 
-function on_click(classNumber) {
+function onclick(classNumber) {
 	insideSection(classNumber);
 }
 
@@ -112,6 +113,7 @@ function submitCallback() {
 		if (!notCompleteFlag) {
 			const sectionSelected = document.getElementsByClassName(`${sectionName}Buttons`)[0];
 			if (!sectionSelected.activeButton) {
+				// eslint-disable-next-line
 				alert(`You haven't made selection for ${sectionName}`);
 				notCompleteFlag = 1;
 			} else {
@@ -120,6 +122,7 @@ function submitCallback() {
 		}
 	});
 	if (!notCompleteFlag) {
+		// eslint-disable-next-line
 		alert(`Thank you for your submission! Here's your selections: \n${result}`);
 	}
 }
