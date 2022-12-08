@@ -18,7 +18,7 @@ childEls.forEach((el) => {
 	});
 });
 
-/*const url = 'https://api.baserow.io/api/database/rows/table/118884/?user_field_names=true';*
+/* const url = 'https://api.baserow.io/api/database/rows/table/118884/?user_field_names=true';*
 
 const list = document.querySelector('#list');
 
@@ -32,4 +32,4 @@ fetch(url, { headers: { Authorization: `Token hvolOlzFmvicJEK9B6yyyM78Yj4F7G3Z` 
       </li>`
       list.insertAdjacentHTML('beforeend', markup);
     }
-});*/
+}); */
