@@ -1,9 +1,12 @@
 // let prevDisplay = document.getElementsByClassName('occationSectionHeader')[0];
-window.onload = function () {
+function setupSelection() {
 	const mainPic = document.getElementsByClassName('mainPic')[0];
 	mainPic.activeId = 'empty';
 	insideSection(0);
 };
+
+setupSelection();
+
 const url = 'https://api.baserow.io/api/database/rows/table/118884/?user_field_names=true';
 
 const list = document.querySelector('#list');
@@ -11,6 +14,7 @@ const list = document.querySelector('#list');
 fetch(url, { headers: { Authorization: 'Token hvolOlzFmvicJEK9B6yyyM78Yj4F7G3Z' } })
 	.then((response) => response.json())
 	.then((data) => {
+		// eslint-ignore-next-line
 		for (let i = 0; i < data.results.length; i++) {
 			console.log(data.results[i]);
 
@@ -21,7 +25,7 @@ fetch(url, { headers: { Authorization: 'Token hvolOlzFmvicJEK9B6yyyM78Yj4F7G3Z' 
 		}
 	});
 
-loadRightPicture = function (className) {
+ function loadRightPicture(className) {
 	const mainPic = document.getElementsByClassName('mainPic')[0];
 	if (mainPic !== className) {
 		document.getElementsByClassName(`${mainPic.activeId}Bottle`)[0].style.display = 'none';
@@ -68,6 +72,7 @@ insideSection = function (classNumber) {
 	const selectionNum = sectionButtons.length;
 	let index = 0;
 	while (index < selectionNum) {
+		// eslint-ignore-next-line
 		const button = sectionButtons[index++];
 		button.onclick = function () {
 			if (sectionInProgress.activeButton !== button.id) {
