@@ -33,7 +33,7 @@ function loadRightPicture(className) {
 		mainPic.activeId = className;
 	}
 }
-insideSection = function (classNumber) {
+function insideSection(classNumber) {
 	if (classNumber > 4) return;
 	const showList = ['occation',
 		'fashion',
