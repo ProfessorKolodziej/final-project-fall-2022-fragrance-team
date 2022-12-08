@@ -3,7 +3,7 @@ function setupSelection() {
 	const mainPic = document.getElementsByClassName('mainPic')[0];
 	mainPic.activeId = 'empty';
 	insideSection(0);
-};
+}
 
 setupSelection();
 
@@ -25,14 +25,14 @@ fetch(url, { headers: { Authorization: 'Token hvolOlzFmvicJEK9B6yyyM78Yj4F7G3Z' 
 		}
 	});
 
- function loadRightPicture(className) {
+function loadRightPicture(className) {
 	const mainPic = document.getElementsByClassName('mainPic')[0];
 	if (mainPic !== className) {
 		document.getElementsByClassName(`${mainPic.activeId}Bottle`)[0].style.display = 'none';
 		document.getElementsByClassName(`${className}Bottle`)[0].style.display = 'inline';
 		mainPic.activeId = className;
 	}
-};
+}
 insideSection = function (classNumber) {
 	if (classNumber > 4) return;
 	const showList = ['occation',
