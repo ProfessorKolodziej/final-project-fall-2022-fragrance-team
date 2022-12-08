@@ -95,11 +95,11 @@ function insideSection(classNumber) {
 		console.log('hahaha!');
 		insideSection(classNumber + 1);
 	});
-};
+};	
 on_click = function (classNumber) {
 	insideSection(classNumber);
 };
-submitCallback = function () {
+function submitCallback() {
 	const showList = ['occation',
 		'fashion',
 		'feeling',
