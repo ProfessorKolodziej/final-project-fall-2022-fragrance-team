@@ -94,7 +94,7 @@ function insideSection(classNumber) {
 		console.log('hahaha!');
 		insideSection(classNumber + 1);
 	});
-};
+}
 
 function on_click(classNumber) {
 	insideSection(classNumber);
@@ -122,4 +122,4 @@ function submitCallback() {
 	if (!notCompleteFlag) {
 		alert(`Thank you for your submission! Here's your selections: \n${result}`);
 	}
-};
+}
