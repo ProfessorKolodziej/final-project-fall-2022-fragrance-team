@@ -295,6 +295,15 @@ nav ul li {
 // my media queries.
 
 // Fragrance.css
+.fragranceTitle {
+	position: relative;
+	font-size: 30px;
+	z-index: 1;
+	overflow: hidden;
+	text-align: center;
+	margin: 0;
+}
+
 .wholePage {
 	display: flex;
 }
@@ -312,15 +321,8 @@ nav ul li {
 .headerCombo {
 	display: block;
 }
-//h1 {
-//position: relative;
-//font-size: 30px;
-//z-index: 1;
-//overflow: hidden;
-//text-align: center;
-//margin: 0;
-//}
-h2 {
+
+.needsLine {
 	width: 100%;
 	text-align: center;
 	border-bottom: 1px solid #000;
@@ -328,7 +330,7 @@ h2 {
 	margin: 10px 0 20px;
 }
 
-h2 span {
+.needsLine span {
 	padding: 0 10px;
 }
 
