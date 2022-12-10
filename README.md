@@ -3,8 +3,21 @@
 # Demo
 https://user-images.githubusercontent.com/113561009/206866610-589e1258-1be3-4221-8202-19e55bfabd76.mp4
 
-# ISSUE
+# ISSUE with the project link
+If you open the link in this github page, you would notice that some parts of our website is not working.
+And it's because after our work is being compiled by this webpack using "npm run deploy", we lose part of our code in our js file. The following video and description will show how I try to reproduce and troubleshoot the issue (but failed, since the root cause is the webpack configuration)
 https://user-images.githubusercontent.com/113561009/206866617-20199896-f942-48c2-af8e-aeb4e808a9d2.mp4
+
+I understand all the projects in this class are using webpack to help deploy directly on github for instructors to view. 
+However, I do find some problems, especially for beginner like us:
+1. Using the same webpack configuation don't seem to be an optimal solution for all different projects in this class.
+2. The class covers basic knowledge of javascript and it is hard for us beginngers to debug, using this webpack configuration. Under this configuation, webpack links all the html page to just one JS file (scripts.js) directly. Ideally, each html page should have a different js file linked to it. Having all the programs for all different html pages in one file makes it hard to maintain for different features. It does not make sense to have all the functions for different html pages in just one JS file and using if conditions to separate them. However, this webpack configuation makes it hard to add or link js files in each html. 
+3. When we use "npm run start" to run our project, there is no easy way to debug any errors in javascript. If you open developer tools, the JS file does not show up in Source. We have to open the html page directly from our file explorer to see relevant js files in developer tools to put break points and debug.
+4. Most importantly, after trying to work around with this webpack (since we don't have enough knowledge to change the configuration), when we finally see everything working when running "npm run start" (as shown in the Demo above), the project link that is associated with "npm run deploy" does not have the right content of our work. To troubleshoot this issue, I opened developer tools, and as you can see in the video, npm somehow converted our "scripts.js" file into another js file "main.e6bc0eb515edc49db11b.js", and in the converted version, all the defined functions are missing, only the lines of code that can be directly executed (those associated with html elements) once the page is loaded are there.
+
+Its just sad to see my working prototye failed in the npm deployed link because of the webpack configuration, of which I have no knowledge of how to change. 
+
+TLDR: Please pull our repo, and try using "npm run start" on your local terminal to see how it works. Some part of our project fails to work inside the link because of the way webpack compiled our project. 
 
 ## Description
 
