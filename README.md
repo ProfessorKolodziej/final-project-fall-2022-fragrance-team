@@ -1,4 +1,10 @@
-# Final Project (Replace with your project name)
+# Final Project (Fragrance Team)
+
+# Demo
+https://user-images.githubusercontent.com/113561009/206866610-589e1258-1be3-4221-8202-19e55bfabd76.mp4
+
+# ISSUE
+https://user-images.githubusercontent.com/113561009/206866617-20199896-f942-48c2-af8e-aeb4e808a9d2.mp4
 
 ## Description
 
