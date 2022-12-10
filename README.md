@@ -6,7 +6,10 @@ https://user-images.githubusercontent.com/113561009/206866610-589e1258-1be3-4221
 # ISSUE with the project link
 If you open the link in this github page, you would notice that some parts of our website is not working.
 And it's because after our work is being compiled by this webpack using "npm run deploy", we lose part of our code in our js file. The following video and description will show how I try to reproduce and troubleshoot the issue (but failed, since the root cause is the webpack configuration)
+
 https://user-images.githubusercontent.com/113561009/206866617-20199896-f942-48c2-af8e-aeb4e808a9d2.mp4
+
+
 
 I understand all the projects in this class are using webpack to help deploy directly on github for instructors to view. 
 However, I do find some problems, especially for beginner like us:
