@@ -251,6 +251,25 @@ nav {
 	text-align: left;
 }
 
+.occationInfo,
+.fashionInfo,
+.feelingInfo,
+.scentInfo,
+.priceInfo,
+.occationSectionHeader,
+.fashionSectionHeader,
+.feelingSectionHeader,
+.scentSectionHeader,
+.priceSectionHeader,
+.occationButtons,
+.fashionButtons,
+.feelingButtons,
+.scentButtons,
+.priceButtons,
+.inProgressBottle {
+	display: none;
+}
+
 .mainPic img {
 	width: 343px;
 	height: 500px;
