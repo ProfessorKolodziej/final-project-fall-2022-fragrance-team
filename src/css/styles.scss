@@ -40,7 +40,7 @@ a {
 	color: black;
 }
 
-h1 {
+.pageHeader {
 	font-family: 'Cardo', sans-serif;
 	color: black;
 }
@@ -99,10 +99,11 @@ p {
 }
 //seasonal choice codes
 .SCnav a,
-h1 {
+.pageHeader {
 	color: black;
 	font-family: 'Cardo', sans-serif;
 	position: relative;
+	font-size: xx-large;
 }
 //gallery page code
 .column img {
