@@ -44,10 +44,7 @@ a {
 	color: black;
 }
 
-p,
-span,
-li,
-button {
+h1 {
 	font-family: 'Cardo', sans-serif;
 }
 
@@ -134,14 +131,12 @@ nav {
 	margin-right: 10px;
 }
 //seasonal choice codes
-.SCnav {
-	background-color: #fcf9ee;
-	width: 100%;
-	padding-top: 1px;
-}
-
-.SCnav a {
+.SCnav a,
+h1 {
+	color: black;
+	font-family: 'Cardo', sans-serif;
 	position: relative;
+	font-size: xx-large;
 }
 
 .season-spring {
@@ -239,6 +234,18 @@ nav {
 }
 
 //find your fragrance page
+.inProgressBottle {
+	display: none;
+}
+
+.singleButton {
+	background-color: black;
+	color: white;
+	border-color: aliceblue;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	text-align: left;
+}
+
 .occationInfo,
 .fashionInfo,
 .feelingInfo,
@@ -256,14 +263,6 @@ nav {
 .priceButtons,
 .inProgressBottle {
 	display: none;
-}
-
-.singleButton {
-	background-color: black;
-	color: white;
-	border-color: aliceblue;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	text-align: left;
 }
 
 .mainPic img {

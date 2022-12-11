@@ -10,13 +10,12 @@
 	<!-- <style>
 	@import url("./css/fragrance.css");
 	</style> -->
-	<script src="./js/fragrance_script.js"></script>
+	<script src="./js/scripts.js"></script>
 	<!--
 		Webpack will automatically link your CSS file for you.
 		Work in the src/css/styles.scss file.
 	-->
 </head>
-<header>
 	<nav>
 		<ul>
 			<li style="display:inline"><a href="index.html">Main Page</a></li>
@@ -26,7 +25,6 @@
 			<li style="display:inline"><a href="About Us.html">About Us</a></li>
 		</ul>
 	</nav>
-</header>
 <body onload="setupSelection()">
 	<div class = "wholePage">
 		<div class="leftColumn">
@@ -70,7 +68,7 @@
 								<button type="button" id="occation5" class="singleButton">for a casual hangout</button>
 								<button type="button" id="occation6" class="singleButton">other</button>
 							</div>
-							<button class="occationNextButton nextSelectionButton">Next</button>
+							<button type="button" class="occationNextButton nextSelectionButton">Next</button>
 						</div>
 					</div>
 					<div class = "fashionInfo subsectionPanel">
@@ -84,7 +82,7 @@
 								<button type="button" id="fashion5" class="singleButton">minimal</button>
 								<button type="button" id="fashion6" class="singleButton">other</button>
 							</div>
-							<button class="fashionNextButton nextSelectionButton">Next</button>
+							<button type="button" class="fashionNextButton nextSelectionButton">Next</button>
 						</div>
 						
 					</div>
@@ -99,7 +97,7 @@
 								<button type="button" id="feeling5"  class="singleButton">Opulent</button>
 								<button type="button" id="feeling6"  class="singleButton">None of the above</button>
 							</div>
-							<button class="feelingNextButton nextSelectionButton">Next</button>
+							<button type="button" class="feelingNextButton nextSelectionButton">Next</button>
 						</div>
 					</div>
 					<div class="scentInfo subsectionPanel">
@@ -113,7 +111,7 @@
 								<button type="button" id="scent5" class="singleButton">Water</button>
 								<button type="button" id="scent6" class="singleButton">None of the above</button>
 							</div>
-							<button class="scentNextButton nextSelectionButton">Next</button>
+							<button type="button" class="scentNextButton nextSelectionButton">Next</button>
 						</div>
 					</div>
 					<div class="priceInfo subsectionPanel">
@@ -127,7 +125,7 @@
 								<button type="button" id="price5" class="singleButton">201-250</button>
 								<button type="button" id="price6" class="singleButton">more than 250</button>
 							</div>
-							<button class="submitButton nextSelectionButton" onclick="submitCallback()" >Submit</button>
+							<button type="button" class="submitButton nextSelectionButton" onclick="submitCallback()" >Submit</button>
 						</div>
 					</div>
 				</div>
@@ -135,15 +133,14 @@
 		</div>
 		<div class="rightColumn">
 			<div class="mainPic">
-				<img src="./images/F1.jpg" alt="Empty Perfume Bottle" class="emptyBottle">
-				<img src="./images/F2.jpg" alt="Bottle - after step 1" class="inProgressBottle occationBottle">
-				<img src="./images/F3.jpg" alt="Bottle - after step 2" class="inProgressBottle fashionBottle">
-				<img src="./images/F4.jpg" alt="Bottle - after step 3" class="inProgressBottle feelingBottle">
-				<img src="./images/F5.jpg" alt="Bottle - after step 4" class="inProgressBottle scentBottle">
-				<img src="./images/F6.jpg" alt="Bottle - after step 5" class="inProgressBottle priceBottle">
+				<img src="./images/bottle0.jpg" alt="Empty Perfume Bottle" class="emptyBottle">
+				<img src="./images/bottle1.jpg" alt="Bottle - after step 1" class="inProgressBottle occationBottle">
+				<img src="./images/bottle2.jpg" alt="Bottle - after step 2" class="inProgressBottle fashionBottle">
+				<img src="./images/bottle3.jpg" alt="Bottle - after step 3" class="inProgressBottle feelingBottle">
+				<img src="./images/bottle4.jpg" alt="Bottle - after step 4" class="inProgressBottle scentBottle">
+				<img src="./images/bottle5.jpg" alt="Bottle - after step 5" class="inProgressBottle priceBottle">
 			</div>
 		</div>
 	</div>
 </body>
-
 </html>
