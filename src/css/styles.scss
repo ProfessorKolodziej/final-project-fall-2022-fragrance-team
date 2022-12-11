@@ -87,6 +87,11 @@ nav {
 	object-fit: cover;
 }
 
+.pageHeader {
+	font-size: 1.7em;
+	font-weight: bold;
+}
+
 @keyframes anima {
 	0% {
 		opacity: 0.6;
@@ -131,12 +136,9 @@ nav {
 	margin-right: 10px;
 }
 //seasonal choice codes
-.SCnav a,
-h1 {
-	color: black;
-	font-family: 'Cardo', sans-serif;
-	position: relative;
-	font-size: xx-large;
+.SCnav {
+	background-color: #fcf9ee;
+	padding-top: 0.5%;
 }
 
 .season-spring {
@@ -263,14 +265,6 @@ h1 {
 .priceButtons,
 .inProgressBottle {
 	display: none;
-}
-
-.singleButton {
-	background-color: black;
-	color: white;
-	border-color: aliceblue;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	text-align: left;
 }
 
 .mainPic img {
